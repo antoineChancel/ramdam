@@ -51,8 +51,23 @@ Languages found: English, French, German, Spanish, Portugese, Polish, Japanese (
 
 ## Methodology
 
+Axe our clustering on short description for this interview.
+
 1. Data cleaning
-2. Tokenization and embedding with different models:
+  - Duplicate
+2. Tokenization and embedding with different models of all data points
   - google-bert/bert-base-multilingual-cased (mean pooling on last hidden layer)
   - FacebookAI/xlm-mlm-100-1280 (too heavy to run on computer)
   - sentence-transformers/distiluse-base-multilingual-cased-v1
+3. Kmeans / hierarchical clustering
+  - elbow plot does not depict a relevant elbow
+  - 20 clusters to grasp data complexity
+  - Export cluster 20 vectors
+
+## API
+
+Framework async with FastAPI
+
+```zsh
+fastapi dev api.py
+```
