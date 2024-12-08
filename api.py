@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 
 model = SentenceTransformer('sentence-transformers/distiluse-base-multilingual-cased-v1')
-clusters = numpy.load('notebooks/vectors.npy')
+clusters = numpy.load('vectors.npy')
 with open('clusters.json', 'r') as file:
     descriptions = json.load(file)
 

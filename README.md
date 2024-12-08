@@ -75,7 +75,12 @@ To locally launch the application
 fastapi dev api.py
 ```
 
-Note : no deployment of the solution
+Note : no deployment of the solution but Docker
+
+```zsh
+docker build -t ramdam .
+docker run -p 8000:8000 -d ramdam
+```
 
 Clusters identifiers have been manually created from common topics found in the clusters. Their mapping is documented in the `clsuters.json` file.
 
